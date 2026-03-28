@@ -1,0 +1,43 @@
+:root {
+	
+	--primary: #BE1622;
+ 	--on-primary: #ffffff;
+	
+	--secondary: #E30613;
+	--on-secondary: #ffffff;
+	
+	--tertiary: #E94E24;
+	--on-tertiary: #ffffff;
+
+	--disabled: #676767;
+	--on-disabled: #ffffff;
+
+	--error: #BA1A1A;
+	--on-error: #FBF8FF;
+	
+	--success: #15803d;
+	--on-success: #bbf7d0;
+	
+	--surface: #f8f9fa;
+	--on-surface: #383836;
+
+	--background: #FBF8FF;
+	--on-background: #383836;
+
+	--background-alternative: #ddd;
+	
+	--border: #8e8c8c43;
+
+	--positive-color: var(--primary);
+	--negative-color: var(--error);
+
+	--text: #383836;
+
+	--backdrop: rgba(0, 0, 0, 0.5);
+
+	--max-width: 1920px;
+	--min-width: 360px;
+	--border-padding: 20px;
+	--button-width: 320px;
+	
+}
