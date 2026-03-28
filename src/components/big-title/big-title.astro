@@ -1,0 +1,18 @@
+---
+import style from './style.module.css';
+
+interface Props {
+    title: string;
+    accentTitle?: string;
+    subtitle?: string;
+}
+
+const { title, accentTitle, subtitle } = Astro.props;
+---
+
+<div class={style.container}>
+    {subtitle && <span class={style.subtitleLabel}>{subtitle}</span>}
+    <h1 class={style.title}>
+        {title} {accentTitle && <span class={style.accent}>{accentTitle}</span>}
+    </h1>
+</div>

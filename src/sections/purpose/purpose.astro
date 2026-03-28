@@ -1,0 +1,67 @@
+---
+import style from './style.module.css';
+import BigTitle from '../../components/big-title/big-title.astro';
+
+const values = [
+    {
+        title: "Negocio",
+        text: "Servicio diferencial, con gran valor agregado."
+    },
+    {
+        title: "Estratégico",
+        text: "Cada decisión aporta a la visión."
+    },
+    {
+        title: "Sustentable",
+        text: "Rentable, ecológico y ético, siempre en la búsqueda de la mejora continua."
+    },
+    {
+        title: "Oportunidad",
+        text: "Cada suceso, positivo o negativo, nos impulsa hacia el siguiente escalón."
+    },
+    {
+        title: "Integridad",
+        text: "Nos destaca la coherencia de lo que pensamos, decimos y hacemos. Nos caracterizamos por hacer que las cosas sucedan."
+    }
+];
+---
+
+<section id="proposito" class={`${style.container} section`}>
+    <div class={`${style.subcontainer} delimiter`}>
+        <div class={style.visionBox}>
+            <span class={style.visionLabel}>Nuestra Visión</span>
+            <blockquote class={style.visionText}>
+                "Convertimos tus ideas en un estilo de vida."
+            </blockquote>
+        </div>
+
+        <div class={style.misionSection}>
+            <BigTitle 
+                subtitle="Nuestra Misión" 
+                title="Hacer de los negocios" 
+                accentTitle="una forma de vida" 
+            />
+            <div class={style.misionDescription}>
+                <p>
+                    Ayudamos a las organizaciones a entender la economía sustentable y el contexto de las empresas, desarrollándolas en pos de alcanzar su visión.
+                </p>
+            </div>
+        </div>
+
+        <div class={style.valuesSection}>
+            <BigTitle 
+                subtitle="Nuestros Valores" 
+                title="Lo que nos" 
+                accentTitle="impulsa" 
+            />
+            <div class={style.valuesGrid}>
+                {values.map(value => (
+                    <div class={style.valueCard}>
+                        <h3 class={style.valueTitle}>{value.title}</h3>
+                        <p class={style.valueText}>{value.text}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

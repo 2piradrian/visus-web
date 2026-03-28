@@ -1,0 +1,45 @@
+---
+import styles from './style.module.css';
+import { Image } from 'astro:assets';
+import logoImage from '../../assets/brand/visus-main.png';
+---
+
+<header id="main-header" class={styles.header}>
+    <div class={styles.navContainer}>
+        <a href="/" class={styles.logo}>
+            <Image src={logoImage} alt="VISUS Logo" class={styles.logoImage} />
+        </a>
+        
+        <nav class={styles.navLinks}>
+            <a href="#inicio" class={styles.navLink}>Inicio</a>
+            <a href="#nosotros" class={styles.navLink}>Nosotros</a>
+            <a href="#servicios" class={styles.navLink}>Servicios</a>
+            <a href="#proposito" class={styles.navLink}>Propósito</a>
+            <a href="#clientes" class={styles.navLink}>Clientes</a>
+        </nav>
+
+        <div class={styles.navActions}>
+            <slot name="actions" />
+        </div>
+    </div>
+</header>
+
+<script>
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header?.classList.add('scrolled_style');
+        } else {
+            header?.classList.remove('scrolled_style');
+        }
+    });
+</script>
+
+<style is:global>
+    .scrolled_style {
+        padding: 16px 20px !important;
+        background: rgba(251, 248, 255, 0.9) !important;
+        backdrop-filter: blur(10px) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+    }
+</style>

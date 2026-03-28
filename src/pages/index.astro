@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from '../layouts/layout.astro';
+import Header from '../components/header/header.astro';
+import Footer from '../components/footer/footer.astro';
+import Hero from '../sections/hero/hero.astro';
+import Purpose from '../sections/purpose/purpose.astro';
+import About from '../sections/about/about.astro';
+import Services from '../sections/services/services.astro';
+import Clients from '../sections/clients/clients.astro';
+import Button from '../components/button/button.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="VISUS | Estudio Contable y Consultoría Estratégica">
+    <Header>
+        <Button slot="actions" href="https://wa.me/+543513856706" variant="primary">Contacto</Button>
+    </Header>
+    <main>
+        <Hero 
+            title="Hacemos que las"
+            accentTitle="Cosas Sucedan"
+            description="Acompañamos a personas y organizaciones en el desafío de alcanzar su visión a través de soluciones contables, impositivas y estratégicas con un enfoque sustentable y humano."
+        />
+        <About />
+        <Services />
+        <Purpose />
+        <Clients />
+    </main>
+    <Footer />
 </Layout>

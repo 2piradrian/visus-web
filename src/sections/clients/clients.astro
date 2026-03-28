@@ -1,0 +1,25 @@
+---
+import style from './style.module.css';
+import BigTitle from '../../components/big-title/big-title.astro';
+---
+
+<section id="clientes" class={`${style.container} section`}>
+    <div class={`${style.subcontainer} delimiter`}>
+        <BigTitle 
+            subtitle="Nuestros Clientes" 
+            title="Compartiendo" 
+            accentTitle="Valores Éticos" 
+        />
+        <p class={style.text}>
+            Nuestros clientes nos eligen por compartir valores éticos. Nosotros los elegimos porque nos representan un gran desafío. 
+            Nuestra asistencia les permite ser mejores empresas y lograr sus objetivos por ser sensatos y responsables con su visión.
+        </p>
+        
+        <div class={style.highlightBox}>
+            <h3 class={style.challengeTitle}>Nuestros clientes son los desafíos</h3>
+            <p class={style.challengeText}>
+                "No tenemos pequeños y/o grandes clientes, no existen; si tenemos pequeños y grandes desafíos, estos son nuestros clientes."
+            </p>
+        </div>
+    </div>
+</section>

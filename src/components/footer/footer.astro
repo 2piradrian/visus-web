@@ -1,0 +1,74 @@
+---
+import style from './style.module.css';
+import { Image } from 'astro:assets';
+import logoImage from '../../assets/brand/visus-main.png';
+import linkedinIcon from '../../assets/icons/linkedin.svg';
+import instagramIcon from '../../assets/icons/instagram.svg';
+---
+
+<footer class={`${style.container} section`}>
+    <div class={`${style.subcontainer} delimiter`}>
+        <div class={style.brandColumn}>
+            <a href="/" class={style.logoLink}>
+                <Image src={logoImage} alt="VISUS Logo" class={style.logoImage} />
+            </a>
+            <p class={style.tagline}>
+                Hacemos que las cosas sucedan. Estudio contable y consultoría estratégica con enfoque sustentable.
+            </p>
+            <div class={style.socialLinks}>
+                <a href="#" class={style.socialIcon} aria-label="LinkedIn">
+                    <img src={linkedinIcon.src} alt="" class={style.socialImage} />
+                </a>
+                <a href="#" class={style.socialIcon} aria-label="Instagram">
+                    <img src={instagramIcon.src} alt="" class={style.socialImage} />
+                </a>
+            </div>
+        </div>
+
+        <div class={style.navColumn}>
+            <h3 class={style.columnTitle}>Explorar</h3>
+            <nav class={style.linkList}>
+                <a href="#inicio" class={style.link}>Inicio</a>
+                <a href="#nosotros" class={style.link}>Nosotros</a>
+                <a href="#servicios" class={style.link}>Servicios</a>
+                <a href="#proposito" class={style.link}>Propósito</a>
+                <a href="#clientes" class={style.link}>Clientes</a>
+            </nav>
+        </div>
+
+        <div class={style.servicesColumn}>
+            <h3 class={style.columnTitle}>Servicios</h3>
+            <nav class={style.linkList}>
+                <a href="#" class={style.link}>Auditoría</a>
+                <a href="#" class={style.link}>Impuestos</a>
+                <a href="#" class={style.link}>Laboral</a>
+                <a href="#" class={style.link}>Inversión</a>
+                <a href="#" class={style.link}>Procesos</a>
+            </nav>
+        </div>
+
+        <div class={style.contactColumn}>
+            <h3 class={style.columnTitle}>Contacto</h3>
+            <div class={style.contactInfo}>
+                <div class={style.contactItem}>
+                    <span class={style.contactLabel}>Ubicación</span>
+                    <span class={style.contactValue}>Córdoba, Argentina</span>
+                </div>
+                <div class={style.contactItem}>
+                    <span class={style.contactLabel}>Email</span>
+                    <span class={style.contactValue}>dk@visus.com.ar</span>
+                </div>
+                <div class={style.contactItem}>
+                    <span class={style.contactLabel}>Teléfono</span>
+                    <span class={style.contactValue}>+54 351 385-6706</span>
+                </div>
+            </div>
+        </div>
+
+        <div class={style.bottomBar}>
+            <p class={style.copyright}>
+                © {new Date().getFullYear()} VISUS. Todos los derechos reservados.
+            </p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.subtitleLabel {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: block;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.title {
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1;
+    font-weight: 900;
+    color: var(--on-background);
+    text-transform: uppercase;
+    margin: 0;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.accent {
+    background: linear-gradient(135deg, var(--primary), var(--secondary), var(--tertiary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: block;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

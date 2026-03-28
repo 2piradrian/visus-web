@@ -1,0 +1,55 @@
+.container {
+    padding: 120px 0px;
+    background-color: #f4f4f4;
+}
+
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.4s ease;
+    border-top: 2px solid transparent;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+}
+
+.serviceTitle {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--on-background);
+    text-transform: uppercase;
+}
+
+.serviceText {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.eduTag {
+    background: var(--primary);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 800;
+    width: fit-content;
+}
