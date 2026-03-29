@@ -16,6 +16,14 @@
     font-size: 14px;
 }
 
+@media (max-width: 450px) {
+    .button {
+        padding: 10px 20px;
+        min-width: 140px;
+        font-size: 12px;
+    }
+}
+
 .primary {
     background-color: var(--primary);
     color: var(--on-primary);

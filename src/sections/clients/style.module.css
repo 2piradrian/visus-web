@@ -54,11 +54,16 @@
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .highlightBox {
-        padding: 40px;
+@media (max-width: 450px) {
+    .container {
+        padding: 60px 0px;
     }
+    
+    .highlightBox {
+        padding: 40px 25px;
+    }
+    
     .challengeTitle {
-        font-size: 24px;
+        font-size: 20px;
     }
 }

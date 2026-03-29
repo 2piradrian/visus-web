@@ -38,6 +38,11 @@
 	--max-width: 1920px;
 	--min-width: 360px;
 	--border-padding: 60px;
-	--button-width: 320px;
 	
+}
+
+@media (max-width: 480px) {
+    :root {
+        --border-padding: 20px;
+    }
 }

@@ -91,3 +91,17 @@
         transform-origin: right center;
     }
 }
+
+@media (max-width: 450px) {
+    .header {
+        padding: 15px var(--border-padding);
+    }
+
+    .logoImage {
+        height: 32px;
+    }
+
+    .navActions {
+        transform: none;
+    }
+}

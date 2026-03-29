@@ -108,3 +108,25 @@
     line-height: 1.6;
     color: var(--text);
 }
+
+@media (max-width: 450px) {
+    .container {
+        padding: 60px 0px;
+    }
+
+    .subcontainer {
+        gap: 60px;
+    }
+
+    .visionBox {
+        padding: 60px 30px;
+    }
+
+    .valueCard {
+        padding: 30px;
+    }
+
+    .misionDescription {
+        font-size: 18px;
+    }
+}
