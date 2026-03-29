@@ -3,9 +3,11 @@
 }
 
 .subcontainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 120px;
+    align-items: flex-start;
 }
 
 .visionBox {

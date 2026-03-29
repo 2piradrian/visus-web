@@ -4,33 +4,35 @@ import BigTitle from '../../components/big-title/big-title.astro';
 ---
 
 <section id="nosotros" class={`${style.container} section`}>
-    <div class={`${style.subcontainer} delimiter`}>
-        <div class={style.headerRow}>
-            <BigTitle 
-                subtitle="¿Quiénes somos?" 
-                title="Pasión por los" 
-                accentTitle="desafíos"
-            />
-        </div>
-        <div class={style.contentGrid}>
-            <div class={style.textBlock}>
-                <div class={style.description}>
-                    <p>
-                        Somos un equipo de profesionales multidisciplinario con el desafío de alcanzar las expectativas de nuestros clientes. 
-                        Trabajamos alineados a nuestra misión y valores, proponiéndote una empresa diferente para ayudarte a lograr tus objetivos.
-                    </p>
-                    <blockquote class={style.quote}>
-                        "Me apasionan los desafíos, me asombran los eventos poco comunes, la gente poco común, las empresas anormales."
-                    </blockquote>
-                </div>
+    <div class="delimiter">
+        <div class={style.subcontainer}>
+            <div class={style.headerRow}>
+                <BigTitle 
+                    subtitle="¿Quiénes somos?" 
+                    title="Pasión por los" 
+                    accentTitle="desafíos"
+                />
             </div>
-            <div class={style.textBlock}>
-                <p class={style.description}>
-                    Tengo como visión apalancar a los que me asombran, tengo como misión hacer que las cosas sucedan y como política encontrar al más idóneo para resolver una situación o conflicto.
-                </p>
-                <p class={style.description}>
-                    Las personas constantemente nos aportan valor. El aprendizaje consta de todo lo que podemos dar, entregar y comunicar. Avanzamos hacia la cima con quien nos acompañe, entendiendo que lo único indispensable es el tiempo.
-                </p>
+            <div class={style.contentGrid}>
+                <div class={style.textBlock}>
+                    <div class={style.description}>
+                        <p>
+                            Somos un equipo de profesionales multidisciplinario con el desafío de alcanzar las expectativas de nuestros clientes. 
+                            Trabajamos alineados a nuestra misión y valores, proponiéndote una empresa diferente para ayudarte a lograr tus objetivos.
+                        </p>
+                        <blockquote class={style.quote}>
+                            "Me apasionan los desafíos, me asombran los eventos poco comunes, la gente poco común, las empresas anormales."
+                        </blockquote>
+                    </div>
+                </div>
+                <div class={style.textBlock}>
+                    <p class={style.description}>
+                        Tengo como visión apalancar a los que me asombran, tengo como misión hacer que las cosas sucedan y como política encontrar al más idóneo para resolver una situación o conflicto.
+                    </p>
+                    <p class={style.description}>
+                        Las personas constantemente nos aportan valor. El aprendizaje consta de todo lo que podemos dar, entregar y comunicar. Avanzamos hacia la cima con quien nos acompañe, entendiendo que lo único indispensable es el tiempo.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

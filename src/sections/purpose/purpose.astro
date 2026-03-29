@@ -27,40 +27,42 @@ const values = [
 ---
 
 <section id="proposito" class={`${style.container} section`}>
-    <div class={`${style.subcontainer} delimiter`}>
-        <div class={style.visionBox}>
-            <span class={style.visionLabel}>Nuestra Visión</span>
-            <blockquote class={style.visionText}>
-                "Convertimos tus ideas en un estilo de vida."
-            </blockquote>
-        </div>
-
-        <div class={style.misionSection}>
-            <BigTitle 
-                subtitle="Nuestra Misión" 
-                title="Hacer de los negocios" 
-                accentTitle="una forma de vida" 
-            />
-            <div class={style.misionDescription}>
-                <p>
-                    Ayudamos a las organizaciones a entender la economía sustentable y el contexto de las empresas, desarrollándolas en pos de alcanzar su visión.
-                </p>
+    <div class="delimiter">
+        <div class={style.subcontainer}>
+            <div class={style.visionBox}>
+                <span class={style.visionLabel}>Nuestra Visión</span>
+                <blockquote class={style.visionText}>
+                    "Convertimos tus ideas en un estilo de vida."
+                </blockquote>
             </div>
-        </div>
 
-        <div class={style.valuesSection}>
-            <BigTitle 
-                subtitle="Nuestros Valores" 
-                title="Lo que nos" 
-                accentTitle="impulsa" 
-            />
-            <div class={style.valuesGrid}>
-                {values.map(value => (
-                    <div class={style.valueCard}>
-                        <h3 class={style.valueTitle}>{value.title}</h3>
-                        <p class={style.valueText}>{value.text}</p>
-                    </div>
-                ))}
+            <div class={style.misionSection}>
+                <BigTitle 
+                    subtitle="Nuestra Misión" 
+                    title="Hacer de los negocios" 
+                    accentTitle="una forma de vida" 
+                />
+                <div class={style.misionDescription}>
+                    <p>
+                        Ayudamos a las organizaciones a entender la economía sustentable y el contexto de las empresas, desarrollándolas en pos de alcanzar su visión.
+                    </p>
+                </div>
+            </div>
+
+            <div class={style.valuesSection}>
+                <BigTitle 
+                    subtitle="Nuestros Valores" 
+                    title="Lo que nos" 
+                    accentTitle="impulsa" 
+                />
+                <div class={style.valuesGrid}>
+                    {values.map(value => (
+                        <div class={style.valueCard}>
+                            <h3 class={style.valueTitle}>{value.title}</h3>
+                            <p class={style.valueText}>{value.text}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     </div>

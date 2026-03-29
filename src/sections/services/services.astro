@@ -32,20 +32,22 @@ const services = [
 ---
 
 <section id="servicios" class={`${style.container} section`}>
-    <div class={`${style.subcontainer} delimiter`}>
-        <BigTitle 
-            subtitle="Nuestras Soluciones" 
-            title="Servicios" 
-            accentTitle="Profesionales" 
-        />
-        <div class={style.grid}>
-            {services.map(service => (
-                <div class={style.card}>
-                    {service.isEdu && <span class={style.eduTag}>EDU-VISUS</span>}
-                    <h3 class={style.serviceTitle}>{service.title}</h3>
-                    <p class={style.serviceText}>{service.text}</p>
-                </div>
-            ))}
+    <div class="delimiter">
+        <div class={style.subcontainer}>
+            <BigTitle 
+                subtitle="Nuestras Soluciones" 
+                title="Servicios" 
+                accentTitle="Profesionales" 
+            />
+            <div class={style.grid}>
+                {services.map(service => (
+                    <div class={style.card}>
+                        {service.isEdu && <span class={style.eduTag}>EDU-VISUS</span>}
+                        <h3 class={style.serviceTitle}>{service.title}</h3>
+                        <p class={style.serviceText}>{service.text}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
 </section>
