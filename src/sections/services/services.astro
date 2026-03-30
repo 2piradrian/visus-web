@@ -1,53 +1,63 @@
 ---
-import style from './style.module.css';
-import BigTitle from '../../components/big-title/big-title.astro';
+import style from "./style.module.css";
+import BigTitle from "../../components/big-title/big-title.astro";
 
 const services = [
-    {
-        title: "Auditoría",
-        text: "Analizamos y obtenemos evidencias relacionadas con las decisiones económicas para evaluarlas y comunicar resultados. Buscamos el funcionamiento correcto para un servicio y precio acorde."
-    },
-    {
-        title: "Impuestos",
-        text: "Interpretamos la realidad impositiva para tomar decisiones correctas. Creemos que el negocio sustentable viene ligado a la rentabilidad a largo plazo y no a la evasión."
-    },
-    {
-        title: "Laboral",
-        text: "El recurso humano es el eslabón más estratégico. Asesoramos en contratación, liquidaciones y auditoría laboral para potenciar el capital que piensa y decide."
-    },
-    {
-        title: "Inversión",
-        text: "Evaluación de proyectos, business plan y contacto con inversores. Idea, financiamiento y administración son los pilares de una organización rentable."
-    },
-    {
-        title: "Procesos",
-        text: "Implementación de flujogramas y métodos óptimos. Obtenemos el equilibrio entre lo importante y lo urgente sin perder de vista la visión establecida."
-    },
-    {
-        title: "Capacitación",
-        isEdu: true,
-        text: "Centro de desarrollo EDU-VISUS. Entendemos la docencia como herramienta indispensable. Formamos y capacitamos líderes para tu empresa."
-    }
+	{
+		title: "Consultoría",
+		text: "Nuestra experiencia y saberes nos llevaron a un “saber cómo” muy afinado. Brindamos apoyo al proceso de toma de decisiones de todo tipo de empresas. Colaboramos con los abordajes de estudios, implementaciones de sistemas, procesos, contrataciones.",
+	},
+	{
+		title: "IT",
+		text: "La especialidad de la casa. Entendemos de tecnología y soluciones en “big data” y proponemos a nuestros clientes a incorporar métricas de medición, tableros que ayuden a tomas mejores decisiones todos los días.",
+		tag: "IT-VISUS",
+	},
+	{
+		title: "Auditoría",
+		text: "Analizamos y obtenemos evidencias relacionadas con las decisiones financieras y económicas, para evaluarlas y comunicar resultados. Buscamos el funcionamiento correcto para un servicio y precio acorde, ofreciendo valor agregado de esta tarea casi rutinaria.",
+	},
+	{
+		title: "Impuestos",
+		text: "Interpretamos la realidad impositiva para tomar decisiones correctas. Creemos y sostenemos como principio, que el negocio sustentable viene ligado a la rentabilidad a largo plazo, con buenas decisiones, y no a la evasión.",
+	},
+	{
+		title: "Laboral",
+		text: "El capital humano es el eslabón en la Cadena de Valor más importante. Asesoramos en contratación, liquidaciones, liderazgo y auditoría laboral para potenciar el capital que piensa y decide con tus recursos.",
+	},
+	{
+		title: "Inversión",
+		text: "Evaluación de proyectos, plan de negocio, financiamiento, programa de inversión, contacto con inversores. “Idea, financiamiento y administración son los pilares de una organización sustentable.",
+	},
+	{
+		title: "Procesos",
+		text: "Implementación de flujogramas, métodos, planes de contingencias, procedimientos. Obtenemos el equilibrio entre lo importante y lo urgente sin perder de vista la visión del cliente. Y te enseñamos cómo hacerlo también.",
+	},
+	{
+		title: "Capacitación",
+		text: "Centro de desarrollo de contenidos. Entendemos la docencia como herramienta indispensable. Formamos y capacitamos líderes para tu empresa.",
+	},
 ];
 ---
 
 <section id="servicios" class={`${style.container} section`}>
-    <div class="delimiter">
-        <div class={style.subcontainer}>
-            <BigTitle 
-                subtitle="Nuestras Soluciones" 
-                title="Servicios" 
-                accentTitle="Profesionales" 
-            />
-            <div class={style.grid}>
-                {services.map(service => (
-                    <div class={style.card}>
-                        {service.isEdu && <span class={style.eduTag}>EDU-VISUS</span>}
-                        <h3 class={style.serviceTitle}>{service.title}</h3>
-                        <p class={style.serviceText}>{service.text}</p>
-                    </div>
-                ))}
-            </div>
-        </div>
-    </div>
+	<div class="delimiter">
+		<div class={style.subcontainer}>
+			<BigTitle
+				subtitle="Nuestras Soluciones"
+				title="Servicios"
+				accentTitle="Profesionales"
+			/>
+			<div class={style.grid}>
+				{
+					services.map((service) => (
+						<div class={style.card}>
+							{service.tag && <span class={style.tag}>{service.tag}</span>}
+							<h3 class={style.serviceTitle}>{service.title}</h3>
+							<p class={style.serviceText}>{service.text}</p>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
 </section>

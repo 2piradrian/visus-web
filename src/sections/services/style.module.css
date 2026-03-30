@@ -47,7 +47,7 @@
     color: var(--text);
 }
 
-.eduTag {
+.tag {
     background: var(--primary);
     color: #fff;
     padding: 4px 12px;
