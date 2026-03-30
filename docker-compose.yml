@@ -1,0 +1,17 @@
+services:
+  arena-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: visus-web
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "3"
