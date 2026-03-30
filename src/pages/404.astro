@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header/header.astro';
+import Footer from '../components/footer/footer.astro';
+import Button from '../components/button/button.astro';
+import Error404 from '../sections/error-404/error-404.astro';
+---
+
+<Layout title="404: Página No Encontrada | VISUS">
+    <Header>
+        <Button slot="actions" href="https://wa.me/+543513856706" variant="primary">Contacto</Button>
+    </Header>
+    <main>
+        <Error404 />
+    </main>
+    <Footer />
+</Layout>

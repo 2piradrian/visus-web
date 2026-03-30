@@ -1,0 +1,46 @@
+.container {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    z-index: 1;
+}
+
+.errorCode {
+    font-size: clamp(6rem, 20vw, 12rem);
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 0.8;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.25rem;
+    max-width: 600px;
+    color: var(--on-surface);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+}
