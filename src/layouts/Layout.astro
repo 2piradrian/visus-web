@@ -5,9 +5,16 @@ import style from './style.module.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	canonicalURL?: string;
 }
 
-const { title, description = "Soluciones digitales VISUS" } = Astro.props;
+const { 
+	title, 
+	description = "Acompañamos a personas en el desafío de diagramar su propósito a través de consultoría y asistencia estratégica integral.",
+	image = "/og-image.jpg",
+	canonicalURL = Astro.url.href
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -17,7 +24,22 @@ const { title, description = "Soluciones digitales VISUS" } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<link rel="canonical" href={canonicalURL} />
 		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
 		<title>{title}</title>
 	</head>
 	<body class={style.layoutContainer}>
