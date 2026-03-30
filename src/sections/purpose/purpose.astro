@@ -1,6 +1,8 @@
 ---
 import style from "./style.module.css";
 import BigTitle from "../../components/big-title/big-title.astro";
+import { Image } from "astro:assets";
+import projectImg from "../../assets/images/project.jpg";
 
 const values = [
 	{
@@ -41,17 +43,26 @@ const values = [
 			</div>
 
 			<div class={style.misionSection}>
-				<BigTitle
-					subtitle="Nuestra Misión"
-					title="Brindar servicios excelentes"
-					accentTitle="y respetuosos"
-				/>
-				<div class={style.misionDescription}>
-					<p>
-						Ayudamos a las organizaciones a entender la economía sustentable y a como
-						medir para tomar mejores decisiones. Cuestiones esenciales para la
-						sustentabilidad.
-					</p>
+				<div class={style.misionContent}>
+					<BigTitle
+						subtitle="Nuestra Misión"
+						title="Brindar servicios excelentes"
+						accentTitle="y respetuosos"
+					/>
+					<div class={style.misionDescription}>
+						<p>
+							Ayudamos a las organizaciones a entender la economía sustentable y a como
+							medir para tomar mejores decisiones. Cuestiones esenciales para la
+							sustentabilidad.
+						</p>
+					</div>
+				</div>
+				<div class={style.imageWrapper}>
+					<Image
+						src={projectImg}
+						alt="Gestión estratégica de proyectos"
+						class={style.image}
+					/>
 				</div>
 			</div>
 

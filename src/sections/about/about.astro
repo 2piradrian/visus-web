@@ -1,6 +1,8 @@
 ---
 import style from "./style.module.css";
 import BigTitle from "../../components/big-title/big-title.astro";
+import { Image } from "astro:assets";
+import teamworkImg from "../../assets/images/teamwork.jpg";
 ---
 
 <section id="nosotros" class={`${style.container} section`}>
@@ -14,35 +16,44 @@ import BigTitle from "../../components/big-title/big-title.astro";
 				/>
 			</div>
 			<div class={style.content}>
-				<div class={style.textBlock}>
-					<div class={style.description}>
-						<p>
-							Somos profesionales, auténticos, alegres y emocionales, siempre con las
-							ganas de superar las expectativas de nuestros clientes. Trabajamos
-							alineados a nuestra visión y valores. “Siendo diferentes, nos acercamos
-							más a nuestros clientes”.
+				<div class={style.imageWrapper}>
+					<Image
+						src={teamworkImg}
+						alt="Equipo de Visus trabajando"
+						class={style.image}
+					/>
+				</div>
+				<div class={style.textColumn}>
+					<div class={style.textBlock}>
+						<div class={style.description}>
+							<p>
+								Somos profesionales, auténticos, alegres y emocionales, siempre con las
+								ganas de superar las expectativas de nuestros clientes. Trabajamos
+								alineados a nuestra visión y valores. “Siendo diferentes, nos acercamos
+								más a nuestros clientes”.
+							</p>
+							<blockquote class={style.quote}>
+								"Tengo como propósito inquietar a los que me sorprenden y ayudarles a
+								hacer que las cosas sucedan."
+								<br />
+								- David Kolesnik -
+							</blockquote>
+						</div>
+					</div>
+					<div class={style.textBlock}>
+						<p class={style.description}>
+							Los clientes constantemente nos aportan valor. Nosotros doblegamos la puesta
+							con aporte de valor hacia ellos. El aprendizaje es mutuo y constante, todo
+							el tiempo, a través de todo lo que podemos dar, entregar y comunicar.
+							Avanzamos más rápido cuando compartimos los valores.
 						</p>
 						<blockquote class={style.quote}>
-							"Tengo como propósito inquietar a los que me sorprenden y ayudarles a
-							hacer que las cosas sucedan."
+							"Me apasionan los desafíos, me asombran los eventos poco comunes, la gente
+							con ideas raras, las empresas anormales."
 							<br />
 							- David Kolesnik -
 						</blockquote>
 					</div>
-				</div>
-				<div class={style.textBlock}>
-					<p class={style.description}>
-						Los clientes constantemente nos aportan valor. Nosotros doblegamos la puesta
-						con aporte de valor hacia ellos. El aprendizaje es mutuo y constante, todo
-						el tiempo, a través de todo lo que podemos dar, entregar y comunicar.
-						Avanzamos más rápido cuando compartimos los valores.
-					</p>
-					<blockquote class={style.quote}>
-						"Me apasionan los desafíos, me asombran los eventos poco comunes, la gente
-						con ideas raras, las empresas anormales."
-						<br />
-						- David Kolesnik -
-					</blockquote>
 				</div>
 			</div>
 		</div>

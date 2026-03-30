@@ -55,6 +55,13 @@
 
 .misionSection {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.misionContent {
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -64,7 +71,19 @@
     font-size: 20px;
     line-height: 1.8;
     color: var(--text);
-    max-width: 800px;
+}
+
+.imageWrapper {
+    width: 100%;
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .valuesSection {
@@ -128,5 +147,14 @@
 
     .misionDescription {
         font-size: 18px;
+    }
+
+    .misionSection {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .image {
+        height: 300px;
     }
 }
