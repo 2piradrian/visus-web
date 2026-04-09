@@ -10,47 +10,27 @@
     align-items: flex-start;
 }
 
-.visionBox {
+.visionSection {
     width: 100%;
-    max-width: 1100px;
-    text-align: center;
-    padding: 100px 60px;
-    background: linear-gradient(135deg, rgba(190, 22, 34, 0.03), rgba(233, 78, 36, 0.03));
-    border-radius: 4px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.visionBox::before {
-    content: '"';
-    position: absolute;
-    top: -40px;
-    left: 40px;
-    font-size: 200px;
-    font-weight: 900;
-    color: var(--primary);
-    opacity: 0.05;
-    font-family: serif;
+.visionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
-.visionLabel {
-    display: block;
-    font-size: 14px;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    font-weight: 800;
-    margin-bottom: 32px;
+.visionContent > h2 {
+    width: 100%;
 }
 
-.visionText {
-    font-size: clamp(32px, 5vw, 64px);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--on-background);
-    font-style: italic;
-    margin: 0;
+.visionDescription {
+    font-size: 20px;
+    line-height: 1.8;
+    color: var(--text);
 }
 
 .misionSection {
