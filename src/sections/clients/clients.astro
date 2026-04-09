@@ -1,6 +1,7 @@
 ---
 import style from "./style.module.css";
 import BigTitle from "../../components/big-title/big-title.astro";
+import ClientsCarrousel from "../../components/clients-carrousel/clients-carrousel.astro";
 ---
 
 <section id="clientes" class={`${style.container} section reveal`}>
@@ -24,9 +25,10 @@ import BigTitle from "../../components/big-title/big-title.astro";
 					"No tenemos pequeños y/o grandes clientes; si tenemos pequeños y grandes
 					desafíos, y siempre nos dan la oportunidad de ser mejores en lo que hacemos"
 					<br />
-					Ellos nos elijen y te mostramos quienes son algunos de ellos.
+					Ellos nos elijen por quienes somos.
 				</p>
 			</div>
 		</div>
 	</div>
+	<ClientsCarrousel />
 </section>

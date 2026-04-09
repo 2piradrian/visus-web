@@ -1,0 +1,58 @@
+---
+import style from "./style.module.css";
+import { Image } from "astro:assets";
+
+import almaSerrana from "../../assets/clients/alma serrana.webp";
+import arena from "../../assets/clients/Arena.webp";
+import aysand from "../../assets/clients/aysand.webp";
+import colegiosJM from "../../assets/clients/colegios jm.webp";
+import corteChap from "../../assets/clients/corte chap.webp";
+import enzoB from "../../assets/clients/enzo b.webp";
+import iarse from "../../assets/clients/iarse.webp";
+import ignux from "../../assets/clients/ignux.webp";
+import loomory from "../../assets/clients/Loomory.webp";
+import looren from "../../assets/clients/looren.webp";
+import odisey from "../../assets/clients/odisey.webp";
+import onlySellers from "../../assets/clients/only sellers.webp";
+import reedTechnology from "../../assets/clients/reed-technology.webp";
+import resortMinaClavero from "../../assets/clients/resort mina clavero.webp";
+import rsMarmoleria from "../../assets/clients/Rs marmoleria.webp";
+import techo from "../../assets/clients/Techo.webp";
+import vivro from "../../assets/clients/vivro.webp";
+
+const clients = [
+	{ name: "Alma Serrana", image: almaSerrana, url: "https://www.instagram.com/almaserranagiardino/" },
+	{ name: "Arena", image: arena, url: "https://arenahnos.com.ar/" },
+	{ name: "AYSAND", image: aysand, url: "https://www.instagram.com/aysandlacalera/" },
+	{ name: "Colegios Jesús María", image: colegiosJM, url: "https://colegiosjesusmaria.com/" },
+	{ name: "Corte Chap", image: corteChap, url: "https://cortechap.com.ar/" },
+	{ name: "Enzo B", image: enzoB, url: "https://enzob.com.ar/" },
+	{ name: "IARSE", image: iarse, url: "https://iarse.org/" },
+	{ name: "IGNUX", image: ignux, url: "https://www.instagram.com/p/DQIQhJjEReR/" },
+	{ name: "Loomory", image: loomory, url: "https://loomory.com.ar/" },
+	{ name: "Looren", image: looren, url: "https://www.instagram.com/loorenvajillaydeco/?hl=es-la" },
+	{ name: "Odisey", image: odisey, url: "https://odisey.co/" },
+	{ name: "Only Sellers", image: onlySellers, url: "https://www.onlysellers.net/" },
+	{ name: "Reed Technology", image: reedTechnology, url: "https://www.reed.ar/" },
+	{ name: "Resort Mina Clavero", image: resortMinaClavero, url: "https://www.clubresort.com.ar/" },
+	{ name: "RS Marmoleria", image: rsMarmoleria, url: "https://rsmarmoleria.com/" },
+	{ name: "Techo para mi País", image: techo, url: "https://argentina.techo.org/" },
+	{ name: "VIVRÓ", image: vivro, url: "https://www.instagram.com/zonavivro/" },
+];
+
+const infiniteClients = [...clients, ...clients];
+---
+
+<div class={style.container}>
+	<div class={style.carouselWrapper}>
+		<div class={style.track}>
+			{
+				infiniteClients.map((c) => (
+					<a href={c.url} target="_blank" rel="noopener noreferrer" class={style.clientCard} title={c.name}>
+						<Image src={c.image} alt={c.name} class={style.logo} />
+					</a>
+				))
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,117 @@
+.container {
+	width: 100%;
+	max-width: 100vw;
+	margin-top: 80px;
+	overflow: hidden;
+	position: relative;
+}
+
+.carouselWrapper {
+	width: 100%;
+	position: relative;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.carouselWrapper::before,
+.carouselWrapper::after {
+	content: "";
+	height: 100%;
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.carouselWrapper::before {
+	left: 0;
+	top: 0;
+	background: linear-gradient(to right, var(--background, #FBF8FF) 0%, transparent 100%);
+}
+
+.carouselWrapper::after {
+	right: 0;
+	top: 0;
+	background: linear-gradient(to left, var(--background, #FBF8FF) 0%, transparent 100%);
+}
+
+.track {
+	display: flex;
+	width: max-content;
+	gap: 60px;
+	animation: scroll-infinite 40s linear infinite;
+	will-change: transform;
+}
+
+.track:hover {
+	animation-play-state: paused;
+}
+
+.clientCard {
+	width: 150px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.3s ease;
+	flex-shrink: 0;
+}
+
+.clientCard:hover {
+	transform: scale(1.1);
+}
+
+.logo {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	object-fit: contain;
+	filter: grayscale(1);
+	opacity: 0.6;
+	transition: all 0.3s ease;
+}
+
+.clientCard:hover .logo {
+	filter: grayscale(0);
+	opacity: 1;
+}
+
+@keyframes scroll-infinite {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-50% - 30px)); 
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		margin-top: 40px;
+	}
+	
+	.track {
+		gap: 40px;
+		animation-duration: 25s;
+	}
+
+	.clientCard {
+		width: 120px;
+		height: 60px;
+	}
+
+	.carouselWrapper::before,
+	.carouselWrapper::after {
+		width: 50px;
+	}
+
+	@keyframes scroll-infinite {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(calc(-50% - 20px));
+		}
+	}
+}
